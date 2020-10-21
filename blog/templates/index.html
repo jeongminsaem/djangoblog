@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% load static %}
+
+<div class="" style="margin:200px 350px; ">
+
+
+  <table class="table table-hover">    
+      {% for post in post_latest %}          
+      <div class="card" style="width: 18rem; height:25rem; float:left; margin: 0 10px 10px 0;">
+        {% if post.title_image %}
+          <img src="{{ post.title_image.url }}" class="card-img-top" alt="..." style="width: 18rem; height:10rem;">
+        {% else %}
+          <div class="card-img-top" alt="..." style="width: 18rem; height:10rem;">
+            <!-- 사진없을때 빈공간 -->
+          </div>
+        {% endif %}    
+        <div class="card-body" style="padding-top: 0;">      
+          <h6 class="card-title"  style="padding-bottom: 0; margin: 0 auto;">{{ post.title }}</h6>
+          <p class="card-text">
+          {% if post.is_content_more50 %}
+             {{ post.get_content_under50 }}
+          {% else %}
+            {{ post.content }}
+          {% endif %}
+         </p>
+         <p class="card-text">{{ post.createDate.year }}/{{ post.createDate.month }}/{{ post.createDate.day }}</p>
+        
+        </div>
+      </div>
+      {% endfor %}
+  </table>
+      
+ 
+    
+
+
+
+
+
+</div>
+{% endblock %}

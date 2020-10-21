@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>Suppablog - Minimal Blog Html Template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Template by Colorlib" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+        <meta name="author" content="Colorlib" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css"  href='{% static "css/clear.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/common.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/font-awesome.min.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/carouFredSel.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/sm-clean.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/style.css" %}' />
+
+        <!--[if lt IE 9]>
+                <script src="{% static 'js/html5.js' %}"></script>
+        <![endif]-->
+
+    </head>
+
+    
+         <!--네비바 레이아웃-->    
+
+        <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #6840ad;" >
+            
+          <a class="navbar-brand" href="#" >홈페이지</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+              <ul class="navbar-nav" >
+                <li class="nav-item active">
+                  <a class="nav-link" href="/blog/"> 게시판 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/guests/"> 방명록 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> ####</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+   
+      
+        {% block content %}
+        {% endblock %}
+
+        <!--Load JavaScript-->
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type='text/javascript' src='{% static "js/imagesloaded.pkgd.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.nicescroll.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.smartmenus.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.carouFredSel-6.0.0-packed.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.mousewheel.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.touchSwipe.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.easing.1.3.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/main.js" %}'></script>
+    </body>
+</html>
